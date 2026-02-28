@@ -21,13 +21,13 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '941486365412433');
+  fbq('init', '1192655042949284');
   fbq('track', 'PageView');
   </script>
 
   <noscript>
   <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=941486365412433&ev=PageView&noscript=1"/>
+  src="https://www.facebook.com/tr?id=1192655042949284&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
 
@@ -85,6 +85,7 @@
       animation:pulse 1.5s infinite;
       border:none;
       cursor:pointer;
+      text-align:center;
     }
 
     @keyframes pulse{
@@ -125,9 +126,9 @@
       <li>Free to Join Telegram</li>
     </ul>
 
-    <button class="cta-btn" onclick="trackLead()">
+    <a href="https://t.me/+2j4IvI539kQ2ZDg9" target="_blank" class="cta-btn">
       🚀 Join Telegram Channel
-    </button>
+    </a>
 
     <p class="note">⚠️ Play responsibly. This channel is for information only.</p>
   </div>
@@ -143,16 +144,6 @@
     count += Math.floor(Math.random() * 3) + 1;
     document.getElementById('count').innerText = count;
   }, 2000);
-
-  function trackLead() {
-    fbq('track', 'Lead', {
-      content_name: 'Telegram Join Button'
-    });
-
-    setTimeout(function() {
-      window.open('https://t.me/+2j4IvI539kQ2ZDg9', '_blank');
-    }, 500);
-  }
 </script>
 
 </body>
