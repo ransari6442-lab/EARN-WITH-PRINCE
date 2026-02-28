@@ -10,6 +10,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,9 +20,16 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1252754346705398');
+
+  fbq('init', '941486365412433');
   fbq('track', 'PageView');
   </script>
+
+  <noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=941486365412433&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
@@ -95,7 +103,6 @@
 
 <div class="container">
   <div class="header">
-    <!-- New Image Added -->
     <img src="https://i.ibb.co/HDbXHHjQ/Whats-App-Image-2026-02-28-at-12-15-01-PM.jpg" 
          class="logo" 
          alt="Profile Photo">
@@ -119,7 +126,7 @@
     <a href="https://t.me/+2j4IvI539kQ2ZDg9" 
        target="_blank"
        class="cta-btn"
-       onclick="fbq('track','Lead')">
+       onclick="fbq('track','Lead', {content_name: 'Telegram Join Button'});">
        🚀 Join Telegram Channel
     </a>
 
@@ -141,4 +148,3 @@
 
 </body>
 </html>
-
