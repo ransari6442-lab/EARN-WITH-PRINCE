@@ -7,6 +7,26 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'YOUR_PIXEL_ID'); // Replace with your Pixel ID
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <style>
     *{
       margin:0;
@@ -78,17 +98,26 @@
 
   <div class="container">
 
-    <div class="title">VIP FLEX 🚀 </div>
+    <div class="title">VIP FLEX 🚀</div>
 
     <img src="https://i.ibb.co/4wY6NmwT/Whats-App-Image-2026-03-17-at-9-45-02-PM.jpg" class="logo">
 
     <a href="https://t.me/+ZTmt3rvmgLc5OWRl"
        target="_blank"
-       class="subscribe-btn">
+       class="subscribe-btn"
+       onclick="trackSubscribe()">
        🔔 Subscribe
     </a>
 
   </div>
+
+  <script>
+    function trackSubscribe() {
+      fbq('track', 'SubscribeButtonClick');
+
+      console.log("Subscribe button clicked");
+    }
+  </script>
 
 </body>
 </html>
