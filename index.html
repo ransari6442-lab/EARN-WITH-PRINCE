@@ -22,9 +22,16 @@
     (window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', 'YOUR_PIXEL_ID'); // Replace with your Pixel ID
+    /* REPLACE WITH YOUR PIXEL ID */
+    fbq('init', '123456789012345');
+
     fbq('track', 'PageView');
   </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/>
+  </noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
@@ -85,6 +92,11 @@
       font-weight:700;
       border-radius:12px;
       animation:pulse 1.5s infinite;
+      transition:0.3s;
+    }
+
+    .subscribe-btn:hover{
+      transform:scale(1.05);
     }
 
     @keyframes pulse{
@@ -100,7 +112,11 @@
 
     <div class="title">VIP FLEX 🚀</div>
 
-    <img src="https://i.ibb.co/4wY6NmwT/Whats-App-Image-2026-03-17-at-9-45-02-PM.jpg" class="logo">
+    <img 
+      src="https://i.ibb.co/4wY6NmwT/Whats-App-Image-2026-03-17-at-9-45-02-PM.jpg" 
+      class="logo"
+      alt="VIP FLEX Logo"
+    >
 
     <a href="https://t.me/+ZTmt3rvmgLc5OWRl"
        target="_blank"
@@ -113,7 +129,12 @@
 
   <script>
     function trackSubscribe() {
-      fbq('track', 'SubscribeButtonClick');
+
+      // Track button click
+      fbq('track', 'Subscribe');
+
+      // Optional custom event
+      fbq('trackCustom', 'TelegramSubscribeClick');
 
       console.log("Subscribe button clicked");
     }
